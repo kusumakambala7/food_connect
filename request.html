@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1240,height=800 initial-scale=1.0">
+  <title>Request Food - FoodConnect</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">FoodConnect</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="donate.html">Donate Food</a></li>
+      <li><a href="request.html" class="active">Request Food</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Request Section -->
+<section class="donate-hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-text">
+    <h1>Request Food Assistance</h1>
+    <p>Fill out the form below to request surplus food for those in need.</p>
+  </div>
+  <div class="donate-form-box">
+    <h2>Request Form</h2>
+    <form id="requestForm" action="/request" method="POST">
+      <div class="form-container">
+        <div class="left-side">
+          <label for="requesterName">Name</label>
+          <input type="text" id="requesterName" name="requesterName" placeholder="Jane Doe" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="janedoe@example.com" required>
+
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="+91 9876543210" required>
+
+          <label for="location">Location</label>
+          <input type="text" id="location" name="location" placeholder="Delhi, India" required>
+        </div>
+        <div class="right-side">
+          <label for="foodRequired">Type of Food Needed</label>
+          <input type="text" id="foodRequired" name="foodRequired" placeholder="Cooked/Uncooked" required>
+
+          <label for="quantity">Quantity Needed (in kg)</label>
+          <input type="number" id="quantity" name="quantity" placeholder="20" required>
+
+          <label for="notes">Additional Requirements</label>
+          <textarea id="notes" name="notes" placeholder="Any special considerations"></textarea>
+        </div>
+      </div>
+      <button type="submit">Submit Request</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 FoodConnect. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

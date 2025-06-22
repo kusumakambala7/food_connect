@@ -1,0 +1,664 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #FAF5E9;
+  background-color: #222831;
+  scroll-behavior: smooth;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(34, 40, 49, 0.8);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  backdrop-filter: blur(10px); /* Glass effect */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+  color: #FFD166;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  color: #FF6F3C;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar li a {
+  position: relative;
+  text-decoration: none;
+  color: #FAF5E9;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.navbar li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background-color: #FFD166;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+  transform-origin: left;
+}
+
+.navbar li a:hover::after,
+.navbar li a.active::after {
+  transform: scaleX(1);
+}
+
+.navbar li a:hover,
+.navbar li a.active {
+  color: #FFD166;
+}
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('food1.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  color: #FAF5E9;
+  animation: fadeIn 1.5s ease-in-out;
+  padding: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 75px;
+  margin-bottom: 5rem; /* Increased gap below heading */
+  line-height: 1.2;
+  color: hsl(45, 100%, 90%);
+  text-shadow: 4px 4px 20px rgba(0, 0, 0, 0.6);
+  animation: slideDown 1s ease-out, glow 2s infinite alternate;
+}
+
+.hero-content p {
+  font-size: 26px;
+  margin-bottom: 5rem; /* Increased gap below subheading */
+  line-height: 1.6;
+  color: hwb(0 1% 99%);
+  animation: fadeInUp 1.5s ease-out;
+}
+
+.hero-content button {
+  background: #FFD166; /* Bright yellow */
+  color: #222831;
+  padding: 1rem 3rem;
+  font-size: 24px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: all 0.4s ease;
+  animation: pulse 2s infinite;
+}
+
+.hero-content button:hover {
+  background: #E6B800;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-indicator {
+  margin-top: 2rem;
+  font-size: 16px;
+  color: #FFD166;
+  opacity: 0.8;
+  animation: bounce 2s infinite;
+}
+
+/* Footer */
+footer {
+  background: #222831;
+  color: #B0B0B0;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 16px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ffcc00;
+  }
+  to {
+    text-shadow: 0 0 20px #ff9900, 0 0 30px #ff9900, 0 0 40px #ff9900;
+  }
+}
+/* RESET & GLOBALS */
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: #eee;
+  
+  
+}
+
+/* Mission Section */
+.mission-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: url('food2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.mission-section h2 {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  color: #f5b942;
+}
+
+.mission-section p {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: hwb(0 0% 100%);
+}
+
+.mission-points {
+  display: flex;
+  justify-content: center;
+  gap: 7rem;
+  flex-wrap: wrap;
+}
+
+.mission-point {
+  width: 280px;
+  padding: 2rem;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.mission-point:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.8);
+}
+
+
+.mission-point h3 {
+  font-size: 30px;
+  margin-bottom: 1rem;
+  color: #ff9900;
+}
+
+.mission-point p {
+  font-size: 25px;
+  color: #ffffff;
+  
+}
+/* Mission Points with background images */
+.mission-point:nth-child(1) {
+  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('food3.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.mission-point:nth-child(2) {
+  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('food4.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.mission-point:nth-child(3) {
+  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('food5.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Make hover effects more obvious */
+.mission-point:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.9);
+  filter: brightness(1.1);
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 2rem;
+  background: url('food2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #000000;
+  text-align: center;
+  border-radius: 30px;
+  margin: 2rem 2rem 2rem 2rem;
+}
+
+.cta-section h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #262626;
+  color: #fff;
+  font-size: 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.cta-button:hover {
+  background: #000;
+  transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+  padding: 1rem;
+  background: #262626;
+  color: #fff;
+  text-align: center;
+  margin-top: 2rem;
+}
+/* HERO SECTION */
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+
+/* Hero Section */
+.donate-hero {
+  position: relative;
+  min-height: 100vh;
+  background: url('food6.jpg') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8rem 2rem 4rem;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  z-index: 0;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: hsl(0, 0%, 0%);
+  margin-bottom: 3rem;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Form Box */
+.donate-form-box {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(135deg, #ffcc00, #ff9900);
+  padding: 2.5rem;
+  border-radius: 12px;
+  width: 85%;
+  max-width: 1100px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+.donate-form-box h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+  font-size: 2rem;
+}
+
+.form-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.left-side, .right-side {
+  flex: 1;
+  min-width: 280px;
+}
+
+.donate-form-box label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.donate-form-box input,
+.donate-form-box textarea {
+  width: 100%;
+  padding: 0.9rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.donate-form-box input:focus,
+.donate-form-box textarea:focus {
+  border-color: #ffc107;
+  outline: none;
+  background: #fff;
+  box-shadow: 0 0 8px rgba(255, 193, 7, 0.5);
+}
+
+.donate-form-box textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.donate-form-box button {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 1rem;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.donate-form-box button:hover {
+  background: #000;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+/* Hover effect for form box */
+.donate-form-box {
+  transition: all 0.4s ease;
+}
+
+.donate-form-box:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+  background: linear-gradient(135deg, #ffcc00, #ff9900); /* Slight color change on hover */
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 1rem;
+  margin-top: 3rem;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* REQUEST PAGE - HERO SECTION */
+
+/* Glassmorphism Contact Page */
+.contact-hero-alt {
+  min-height: 100vh;
+  background: url('food7.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+}
+
+.contact-glass-box {
+  background: rgba(0, 0, 0, 0.6); /* Darker background */
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  width: 100%;
+  max-width: 600px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+.contact-glass-box h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-glass-box p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.8;
+}
+
+.contact-glass-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-glass-box label {
+  text-align: left;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.contact-glass-box input,
+.contact-glass-box textarea {
+  width: 100%;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.contact-glass-box input::placeholder,
+.contact-glass-box textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-glass-box input:focus,
+.contact-glass-box textarea:focus {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.contact-glass-box textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-glass-box button {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  background: #ffc107;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.contact-glass-box button:hover {
+  background: #ff9800;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+.hero, .donate-hero, .request-hero, .mission-section, .cta-section, .contact-hero-alt {
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+body {
+  min-width: 1200px;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+body::after {
+  content: "← Scroll →";
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  z-index: 1000;
+}
